@@ -71,8 +71,10 @@ async function loadProjects() {
       const li = document.createElement('li');
       li.innerHTML = `
         ${project.name} (Progress: ${progress.toFixed(2)}%)
-        <button onclick="editProject(${project.id})">Edit</button>
-        <button onclick="deleteProject(${project.id})">Delete</button>
+        <div class="project-buttons">
+          <button class="edit-btn" onclick="editProject(${project.id})">Edit</button>
+          <button class="delete-btn" onclick="deleteProject(${project.id})">Delete</button>
+        </div>
       `;
       li.addEventListener('click', () => selectProject(project));
       projectList.appendChild(li);
@@ -136,8 +138,10 @@ async function selectProject(project) {
         const li = document.createElement('li');
         li.innerHTML = `
           ${task.name} (Bobot: ${task.weight}, Status: ${task.status})
-          <button onclick="editTask(${task.id}, '${task.name}', '${task.status}', ${task.weight})">Edit</button>
-          <button onclick="deleteTask(${task.id})">Delete</button>
+          <div class="task-buttons">
+            <button class="edit-btn" onclick="editTask(${task.id}, '${task.name}', '${task.status}', ${task.weight})">Edit</button>
+            <button class="delete-btn" onclick="deleteTask(${task.id})">Delete</button>
+          </div>
         `;
         taskList.appendChild(li);
       });
