@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="projects">
+      <h2>Daftar Proyek</h2>
+      <button id="addProjectBtn">Tambah Proyek</button>
+      <ul id="projectList"></ul>
+    </div>
+
+    <div class="project-detail">
+      <h2>Detail Proyek</h2>
+      <div id="projectDetail"></div>
+      <button id="addTaskBtn">Tambah Task</button>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <!-- Modal untuk Project -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tambah/Edit Proyek</h2>
+      <form id="modalProjectForm">
+        <input type="text" id="modalProjectName" placeholder="Nama Proyek" required>
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal untuk Task -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tambah/Edit Task</h2>
+      <form id="taskForm">
+        <input type="text" id="taskName" placeholder="Nama Task" required>
+        <select id="taskStatus">
+          <option value="Draft">Draft</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Done">Done</option>
+        </select>
+        <input type="number" id="taskWeight" placeholder="Bobot" min="1" required>
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f8ff; /* Latar belakang lebih cerah */
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.projects,
+.project-detail {
+  background: white;
+  padding: 20px;
+  border-radius: 10px; /* Border lebih melengkung */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow lebih tegas */
+  width: 48%;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #007BFF;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  background-color: #28a745; /* Warna hijau cerah */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Tombol lebih melengkung */
+  font-size: 14px;
+  transition: background-color 0.3s ease; /* Animasi transisi */
+}
+
+button:hover {
+  background-color: #218838; /* Warna hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align center for better alignment */
+  transition: background-color 0.2s ease; /* Animasi hover */
+}
+
+li:hover {
+  background-color: #f9f9f9;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Background gelap */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: none;
+  border-radius: 10px; /* Modal lebih melengkung */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow lebih dalam */
+  width: 60%; /* Lebar lebih kecil */
+  animation: fadeIn 0.4s ease; /* Animasi fadeIn */
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Tambahan untuk tombol kecil */
+.small-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.small-button:hover {
+  background-color: #0056b3;
+}
